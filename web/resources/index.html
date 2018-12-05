@@ -13,6 +13,8 @@
 	var oModel = new sap.ui.model.odata.ODataModel("/xsodata/purchaseOrder.xsodata", true);
 	var oTable = new sap.ui.table.Table({ title: "My first table" });
 	oTable.addColumn(new sap.ui.table.Column({ label: "PO ID", template: "PURCHASEORDERID" }));
+	oTable.addColumn(new sap.ui.table.Column({ label: "Partner", template: "PARTNER" }));
+		oTable.addColumn(new sap.ui.table.Column({ label: "Amount", template: "GROSSAMOUNT" }));
 	oTable.setModel(oModel);
 	oTable.bindRows("/POHeader");
 	oTable.placeAt("uiArea");
